@@ -221,7 +221,7 @@ class ProductController extends \Phalcon\Mvc\Controller
     */
     public function searchProductAction(){
         $search = $this->request->get("search"); // search first and last name
-        $products = $this::searchProducts($search); //print_r($customers); die();
+        $products = $this::searchProducts($search);
         foreach($products as $product){
             $b = (object) $product;
             $results[] = array(
